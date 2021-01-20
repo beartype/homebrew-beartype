@@ -1,0 +1,23 @@
+# Credit to https://github.com/dawidd6/homebrew-tap
+
+name: Bumping
+
+on:
+  schedule:
+    # Every 12 hours
+    - cron: '0 */12 * * *'
+  workflow_dispatch:
+
+jobs:
+  bump:
+    continue-on-error: true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install pipgrip
+        run: brew install pipgrip
+      - name: Bump formulae
+        uses: dawidd6/action-homebrew-bump-formula@v3
+        with:
+          token: ${{secrets.HOMEBREW_GITHUB_API_TOKEN}}
+          tap: ${{github.repository}}
+          livecheck: true
