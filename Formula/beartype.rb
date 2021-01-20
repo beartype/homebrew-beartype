@@ -13,6 +13,14 @@ class Beartype < Formula
     url :stable
   end
 
+  bottle do
+    root_url "https://github.com/harens/homebrew-bear/releases/download/beartype-0.5.1"
+    cellar :any_skip_relocation
+    sha256 "f544326a5c21a65f9c8dcbb9dcdfa62955c22b80133c45b008b98cfe4638f989" => :big_sur
+    sha256 "ba564c174ff0fc1cd436d2383ce636a8a6c6467fccc72d5b8f79335409321f88" => :catalina
+    sha256 "0040fbf165a51d4a0fc8c73a90c458d0818693bb4d69b47d23ad893153a8ac38" => :x86_64_linux
+  end
+
   depends_on "python@3.9"
 
   def install
