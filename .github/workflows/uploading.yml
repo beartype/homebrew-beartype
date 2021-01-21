@@ -9,7 +9,7 @@ on:
 
 jobs:
   upload:
-    if: contains(github.event.pull_request.labels.*.name, 'beary cool')
+    if: contains(github.event.pull_request.labels.*.name, 'beary cool 🐻')
     runs-on: ubuntu-latest
     steps:
       - name: Set up Homebrew

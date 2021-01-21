@@ -14,7 +14,7 @@ class Beartype < Formula
   end
 
   bottle do
-    root_url "https://github.com/harens/homebrew-bear/releases/download/beartype-0.5.1"
+    root_url "https://github.com/beartype/homebrew-beartype/releases/download/beartype-0.5.1"
     cellar :any_skip_relocation
     sha256 "f544326a5c21a65f9c8dcbb9dcdfa62955c22b80133c45b008b98cfe4638f989" => :big_sur
     sha256 "ba564c174ff0fc1cd436d2383ce636a8a6c6467fccc72d5b8f79335409321f88" => :catalina

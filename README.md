@@ -1,18 +1,18 @@
-# 🍺 homebrew-bear
+# 🍺 homebrew-beartype
 
 Pawsibly the only homebrew tap you'll ever find with an unbearably good bare-metal type checker. 🐻
 
 ## Installation
 
 ```bash
-brew tap beartype/bear
+brew tap beartype/beartype
 brew install <FORMULA>
 ```
 
 or alternatively...
 
 ```bash
-brew install beartype/bear/<FORMULA>
+brew install beartype/beartype/<FORMULA>
 ```
 
 ## Formulae/Casks
