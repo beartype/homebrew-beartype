@@ -15,6 +15,8 @@ or alternatively...
 brew install beartype/beartype/<FORMULA>
 ```
 
+Pre-compiled bottles are available for macOS Catalina, Big Sur and x86_64 Linux.
+
 ## Formulae/Casks
 
 | Program | Description |
