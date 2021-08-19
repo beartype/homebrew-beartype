@@ -3,17 +3,16 @@ class Beartype < Formula
 
   desc "Unbearably fast O(1) runtime type-checking in pure Python"
   homepage "https://github.com/beartype/beartype"
-  url "https://files.pythonhosted.org/packages/c9/ee/f6eed95460062c9751aabe6cc279510cecc9492a04f274a14b52812534fd/beartype-0.7.1.tar.gz"
-  sha256 "0ea3b0b7983e4bdabb47ad299a4ba11cc48beaedabaf89752eea27cb6152e5c1"
+  url "https://files.pythonhosted.org/packages/40/5c/06005933be7c74bd03c115a9dc8e36ca1a004a76b12b5040759fc20d9f99/beartype-0.8.0.tar.gz"
+  sha256 "d6038f631b7e3d9dba18c9a3f18282af505fc2076003dd51b61abbcbdafaa859"
   license "MIT"
   # Default branch is "main" not "master" (unbearably modern)
   head "https://github.com/beartype/beartype.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/beartype/homebrew-beartype/releases/download/beartype-0.7.1"
-    sha256 cellar: :any_skip_relocation, big_sur:      "d196e40751fd4ef1a69d1293689db136bad54ebc5bfbe42874d029d50bc0a4c3"
-    sha256 cellar: :any_skip_relocation, catalina:     "fcd6a805f03dba774f88b6f74c037eb1bff502b554c91b1bf983067a757cafa6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "5f86683730d8970bbdf609b1799642a6fa358018dd8efdd853b9755f16bcfd17"
+    root_url "https://github.com/beartype/homebrew-beartype/releases/download/beartype-0.8.0"
+    sha256 cellar: :any_skip_relocation, catalina:     "50db0d794f450bd00b1c2ea446e0c4ca97744bad9479b1b615e4d8cc16f09b05"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "1c3e196507d099c5cf1b55e26d5bdd6c5a2768030db835a18115bede4d23395f"
   end
 
   depends_on "python@3.9"
