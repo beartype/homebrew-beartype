@@ -23,6 +23,7 @@ jobs:
         uses: Homebrew/actions/git-try-push@master
         with:
           token: ${{secrets.HOMEBREW_GITHUB_API_TOKEN}}
+          branch: main
       - name: Delete branch
         if: github.event.pull_request.head.repo.fork == false
         run: git push --delete origin ${{github.event.pull_request.head.ref}}
