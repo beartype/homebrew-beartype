@@ -10,9 +10,9 @@ class Beartype < Formula
   head "https://github.com/beartype/beartype.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/beartype/homebrew-beartype/releases/download/beartype-0.9.1"
-    sha256 cellar: :any_skip_relocation, catalina:     "6d1143a47384158253eb99bc6d7566b545f7a24c3afe17072c9bf0f01b2e2f77"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "0525c165036713870a363327fa04a7429e5c0f593c2dbeed576a205e678e6e32"
+    root_url "https://github.com/beartype/homebrew-beartype/releases/download/beartype-0.10.0"
+    sha256 cellar: :any_skip_relocation, catalina:     "ae61aa59139cec2db83dcf02ebf6a954dfd3651a6e4a3c37462445368174c218"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "767b0d499a58a8e2dfa4ead369cdc6c7e77d22782ee76983a95acf08643cf490"
   end
 
   depends_on "python@3.10"
