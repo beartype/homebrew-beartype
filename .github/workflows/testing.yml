@@ -11,7 +11,7 @@ jobs:
   check:
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/homebrew/ubuntu16.04:master
+      image: ghcr.io/homebrew/ubuntu22.04:master
     steps:
       - name: Set up Homebrew
         uses: Homebrew/actions/setup-homebrew@master
@@ -23,20 +23,27 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os:
-          - ubuntu-18.04
-          - macos-10.15
+        include:
+          - os: ubuntu-latest
+            container:
+              image: ghcr.io/homebrew/ubuntu22.04:master
+              options: --user=linuxbrew
+          - os: macos-11
+          - os: macos-12
     runs-on: ${{matrix.os}}
+    container: ${{matrix.container}}
     steps:
       - name: Set up Homebrew
         uses: Homebrew/actions/setup-homebrew@master
       - name: Build bottles
         run: |
-          brew test-bot --only-cleanup-before
-          brew test-bot --only-formulae --skip-recursive-dependents
+          mkdir ~/bottles
+          cd ~/bottles
+          brew test-bot
       - name: Upload bottles
         if: always()
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: bottles
-          path: '*.bottle.*'
+          path: ~/bottles
+          if-no-files-found: error
