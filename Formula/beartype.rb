@@ -16,14 +16,14 @@ class Beartype < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "e6f86201d690fed990d41a9111ba6d5bfcb0c615a68f7635c5761773fab33a1f"
   end
 
-  depends_on "python@3.10"
+  depends_on "python@3.11"
 
   def install
     # Based on name-that-hash
     # https://github.com/Homebrew/homebrew-core/blob/9652b75b2bbaf728f70c50b09cce39520c08321d/Formula/name-that-hash.rb
     virtualenv_install_with_resources
 
-    xy = Language::Python.major_minor_version Formula["python@3.10"].opt_bin/"python3"
+    xy = Language::Python.major_minor_version Formula["python@3.11"].opt_bin/"python3"
     site_packages = "lib/python#{xy}/site-packages"
     pth_contents = "import site; site.addsitedir('#{libexec/site_packages}')\n"
     (prefix/site_packages/"homebrew-beartype.pth").write pth_contents
@@ -31,7 +31,7 @@ class Beartype < Formula
 
   test do
     # Simple version number check
-    system Formula["python@3.10"].opt_bin/"python3", "-c", <<~EOS
+    system Formula["python@3.11"].opt_bin/"python3.11", "-c", <<~EOS
       import #{name}
       assert #{name}.__version__ == "#{version}"
     EOS
