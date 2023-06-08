@@ -30,6 +30,7 @@ jobs:
               options: --user=linuxbrew
           - os: macos-11
           - os: macos-12
+          - os: macos-13
     runs-on: ${{matrix.os}}
     container: ${{matrix.container}}
     steps:
