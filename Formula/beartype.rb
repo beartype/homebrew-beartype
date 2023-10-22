@@ -10,10 +10,10 @@ class Beartype < Formula
   head "https://github.com/beartype/beartype.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/beartype/homebrew-beartype/releases/download/beartype-0.16.3"
-    sha256 cellar: :any_skip_relocation, ventura:      "f460ab41a2e2cda985b7ad810fa4aba5f4db9437e949bf70d6a646c9a5ac4156"
-    sha256 cellar: :any_skip_relocation, monterey:     "5065b8df2948b34ac4d8d201d90f4e295bafe826f83237dc6af6820b2d03e446"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "ad2cb7431c1c633eadf0a48d74ef6ce3185474073eb3f66d2d03d572b4b7edd7"
+    root_url "https://github.com/beartype/homebrew-beartype/releases/download/beartype-0.16.4"
+    sha256 cellar: :any_skip_relocation, ventura:      "173eedf109ae04b93694a5c80f0706e4e4908d5b1e0806a1708ebdd6d431e718"
+    sha256 cellar: :any_skip_relocation, monterey:     "987430ebb9e3f708fb1a4462fbbf132c7ddde410f05e9285e968e30f1b5a33e1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "2b1a5ca1ffb41198d51e3006662f18ef52ac029aa5846dd3abbae1b6c043dff3"
   end
 
   depends_on "python@3.11"
