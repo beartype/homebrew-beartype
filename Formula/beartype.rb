@@ -3,8 +3,8 @@ class Beartype < Formula
 
   desc "Unbearably fast O(1) runtime type-checking in pure Python"
   homepage "https://github.com/beartype/beartype"
-  url "https://files.pythonhosted.org/packages/f2/c8/59fc7d7429b8849aaa69d25dfac94da3cc8afcba6658f64e8cc17fe023ca/beartype-0.18.2.tar.gz"
-  sha256 "a6fbc0be9269889312388bfec6a9ddf41bf8fe31b68bcf9c8239db35cd38f411"
+  url "https://files.pythonhosted.org/packages/df/40/4a47eacf835b451f02859156e7f87b761a071a11cac0091a77d496e667b7/beartype-0.18.3.tar.gz"
+  sha256 "04853d78493f3c84b03956f1fa0c1e5b84c5332a760559ddc8f2cf6141ddf791"
   license "MIT"
   # Default branch is "main" not "master" (unbearably modern)
   head "https://github.com/beartype/beartype.git", branch: "main"
